@@ -27,7 +27,7 @@ pipeline {
             }
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'shjenkins_dock_deploy') {
+                    docker.withRegistry('https://registry.hub.docker.com', 'demo_docker_connect') {
                         app.push("${env.BUILD_NUMBER}")
                         app.push("latest")
                     }
